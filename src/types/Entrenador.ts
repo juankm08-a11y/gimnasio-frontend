@@ -1,6 +1,5 @@
 export interface Implemento {
-  idImplemento?: number;
+  idEntrenador?: number;
   nombre: string;
-  tipo: string;
-  estado: string;
+  especialidad: string;
 }
