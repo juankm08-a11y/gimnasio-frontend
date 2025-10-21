@@ -1,3 +1,4 @@
+// Creamos nuestro objeto entrenador
 export interface Entrenador {
   idEntrenador?: number;
   nombre: string;
