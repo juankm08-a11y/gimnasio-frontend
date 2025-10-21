@@ -38,13 +38,38 @@ export default function ImplementoForm({
 
   return (
     <form onSubmit={submit} className="flex gap-2 items-center flex-wrap">
-      <input placeholder="Nombre" className="border px-2 py-1" />
-      <input placeholder="Tipo" className="border px-2 py-1" />
-      <input placeholder="Estado" className="border px-2 py-1" />
+      <input
+        placeholder="Nombre"
+        className="border px-2 py-1"
+        value={tipo}
+        onChange={(e) => setNombre(e.target.value)}
+        required
+      />
+      <input
+        placeholder="Tipo"
+        className="border px-2 py-1"
+        value={tipo}
+        onChange={(e) => setTipo(e.target.value)}
+        required
+      />
+      <input
+        placeholder="Estado"
+        value={estado}
+        onChange={(e) => setEstado(e.target.value)}
+        className="border px-2 py-1"
+        required
+      />
       <button
         className="bg-blue-600 text-white px-3 py-1 rounded"
         type="submit"
-      ></button>
+      >
+        {editing ? "Actualizar" : "Crear"}
+      </button>
+      {onCancel && (
+        <button type="button" onClick={onCancel} className="px-3 py-1">
+          Cancelar
+        </button>
+      )}
     </form>
   );
 }
