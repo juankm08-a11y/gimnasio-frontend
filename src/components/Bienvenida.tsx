@@ -1,5 +1,6 @@
 import React from "react";
 
+// Creamos nuestro componente de mensaje de bienvenida
 export default function Bienvenida({
   nombre = "Usuario",
 }: {

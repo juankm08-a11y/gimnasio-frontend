@@ -1,6 +1,7 @@
 import api from "./api";
 import { Usuario } from "../types/Usuario";
 
+// Creamos nuestro CRUDUsuarios
 export async function getUsuarios(): Promise<Usuario[]> {
   const res = await api.get<Usuario[]>("/usuarios");
   return res.data;

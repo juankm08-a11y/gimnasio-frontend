@@ -1,6 +1,9 @@
+// Llamos a nuestra api
 import api from "./api";
+// Llamamos a nuestro objeto Implemento
 import { Implemento } from "../types/Implementos";
 
+// Creamos nuestro CRUDImplementos
 export async function getImplementos(): Promise<Implemento[]> {
   const res = await api.get<Implemento[]>("/implementos");
   return res.data;

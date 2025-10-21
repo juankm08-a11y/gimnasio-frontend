@@ -1,3 +1,4 @@
+// Creamos nuestro componente formularioImplementos
 import React, { useEffect, useState } from "react";
 import { Implemento } from "@/types/Implementos";
 

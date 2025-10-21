@@ -1,6 +1,7 @@
 import api from "./api";
 import { Entrenador } from "../types/Entrenador";
 
+// Creamos nuestro CRUDEntrenadores
 export async function getEntrenadores(): Promise<Entrenador[]> {
   const res = await api.get<Entrenador[]>("/entrenadores");
   return res.data;
